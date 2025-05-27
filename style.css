@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    padding: 32px 24px;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.instructions p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.choice-btn {
+    background: #e0e7ff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 48px;
+    margin: 0 2px;
+    word-break: break-word;
+}
+
+.choice-btn:hover, .choice-btn:focus {
+    background: #b4c6fc;
+    transform: translateY(-2px) scale(1.05);
+    outline: none;
+}
+
+.result {
+    min-height: 32px;
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: 10px;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    .choices {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .scoreboard {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 1rem;
+    }
+    .choice-btn {
+        font-size: 1.15rem;
+        padding: 18px 0;
+        min-height: 54px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding: 8px 2px;
+    }
+    .choice-btn {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    .result {
+        font-size: 1rem;
+    }
+} 
